@@ -1,0 +1,6 @@
+Bagaimana memori dialokasikan?	
+Jawaban: HashMap dan int[] A disimpan di heap, variabel lokal di stack.
+Apa yang terjadi setelah method selesai?	
+Jawaban: Semua variabel lokal hilang; freqMap jadi kandidat GC.
+Apakah ada memory leak?	
+Jawaban: Tidak ada, karena tidak ada referensi tertinggal.

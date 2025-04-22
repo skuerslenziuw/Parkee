@@ -1,0 +1,14 @@
+Langkah-langkah koordinasi:
+1. Identifikasi dan validasi isu.
+Pastikan masalah nyata dan kritis, misalnya downtime, error, atau performa buruk.
+
+2. Catat detail error.
+Ambil log, screenshot, atau output yang relevan.
+
+3. Segera hubungi tim support dan engineer.
+Gunakan channel cepat (Slack, WA, call).
+
+4. Laporkan dengan format jelas:
+-Waktu kejadian
+-Dampak (apa yang error, siapa yang terdampak)
+-Langkah awal yang sudah dicoba

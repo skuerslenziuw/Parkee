@@ -1,0 +1,45 @@
+1. Pencarian File Berdasarkan Ekstensi
+./find_by_ext.sh /path/to/dir txt
+
+2. Automasi Pembaruan Sistem
+logfile="update_$(date +%F_%T).log"
+
+if command -v apt &>/dev/null; then
+  sudo apt update && sudo apt upgrade -y | tee "$logfile"
+elif command -v yum &>/dev/null; then
+  sudo yum update -y | tee "$logfile"
+elif command -v dnf &>/dev/null; then
+  sudo dnf upgrade -y | tee "$logfile"
+else
+  echo "Package manager tidak dikenali."
+fi
+
+3. Membuat dan Menyimpan SSH Key
+dest_dir=$1
+mkdir -p "$dest_dir"
+ssh-keygen -t rsa -b 4096 -f "$dest_dir/id_rsa" -N ""
+
+4. Pengelolaan Service
+action=$1
+service=$2
+
+sudo systemctl $action $service
+
+5.
+scp:
+file=$1
+user=$2
+ip=$3
+
+scp -r "$file" "$user@$ip:~/"
+
+rsync:
+file=$1
+user=$2
+ip=$3
+
+rsync -avz "$file" "$user@$ip:~/"
+
+
+
+
